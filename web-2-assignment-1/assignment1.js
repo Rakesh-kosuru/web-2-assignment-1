@@ -1,4 +1,4 @@
-// Assignment 1 - display the first 20 products from the JSON file.
+// display the first 20 products from the JSON file.
 import data from './data-pretty.json' with { type: 'json' };
 
 const PRODUCT_COUNT = 20;
@@ -24,7 +24,7 @@ function createCard(product) {
   img.addEventListener('click', () => alert(`Product ID: ${product.id}`));
 
   card.querySelector('.title').textContent = product.title;
-  card.querySelector('.price').textContent = `$${product.price.toFixed(2)}`;
+  card.querySelector('.price').textContent = `$${product.price}`;
 
   const btn = card.querySelector('.add-btn');
   btn.setAttribute('aria-label', `Add ${product.title} to cart`);
